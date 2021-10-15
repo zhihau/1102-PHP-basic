@@ -1,0 +1,95 @@
+/* Global Style */
+html{
+    background-color: #95bcc5;
+    box-sizing: border-box;
+}
+*,*:before,*:after{
+    box-sizing:inherit;
+}
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 87%;
+    /*16px 87% 13.92px 14px*/
+}
+
+.container{
+    /* 數字後面會介紹 */
+    max-width:940px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:20px;
+    /* margin:20px auto; */
+    background-color: white;
+    padding-left:40px;
+    padding-right:3em;
+    /* em 14px x3 =42px */
+}
+
+/* Header style */
+
+.header{
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    color:pink;
+    /*h1 正常 200% 16px 23px*/
+}
+.header-title{
+margin:0;
+font-weight: normal;
+font-size: 165%;
+}
+.header-slogan{
+margin: 0;
+
+}
+/* Nav style */
+.nav{
+color:yellow;
+}
+.content-area{
+    display: flex;
+    border-top:2px solid #e5e9dc;
+    border-bottom: 1px solid #e5e59c;
+    padding:7px;
+}
+/* Main-area Style */
+.main-area{
+    width:60%;
+    padding-right: 3em;;
+
+}
+/* Sidebar Style */
+.sidebar{
+    width:40%;
+    background-color: #eeeee1;
+    padding:20px 40px;
+    font-size: 85%;
+    /* 13.92px 0.85% 11.83px */
+}
+/* Footer Style */
+.footer{
+    color:grey;
+    text-align:  center;
+    font-size:85px;
+    color:#999;
+    padding-top: 20px;
+    padding-bottom:20px;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow:hidden;
+    border-bottom:2px darkgray solid;
+    
+}
+li{
+    float:left;
+}
+li a{
+    display: block;
+    padding: 8px;
+    background-color: lightgray;
+}
