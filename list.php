@@ -8,10 +8,20 @@
 迴圈3~100
 迴圈3~$i
 $i%$j!=0 continue
+<hr>
 <?php
 
-for($i=3;$i<100;$i=$i*2+1){
-    echo $i.",";
+for($i=3;$i<100;$i++){
+    $test=false;//表示質數
+    for($j=2;$j<$i;$j++){
+        if($i % $j==0){
+            $test =true;//表示不是質數
+        }
+    }
+    if($test==false){
+        echo $i.",";
+        
+    }
 }
 
 ?>
