@@ -17,6 +17,9 @@
         margin:5px;
         width:16px;
     }
+    .ball12{
+        background:yellow;
+    }
 </style>
 </head>
 <body>
@@ -38,6 +41,9 @@
     echo "<hr>";
     foreach($nums as $num){
         echo "<div class='ball'>".$num."</div> ";
+    }
+    foreach($nums as $num){
+        echo "<div class='ball12'>".$num."</div> ";
     }
     ?>
 </body>
