@@ -13,16 +13,18 @@
     <h1>威力彩電腦選號沒有重覆號碼</h1>
     <?php
     $nums=[];
-    
-    for($i=0;$i<6;$i++){
+    $i=0;
+    while(count($nums)<6){
         $t=rand(1,38);
         if(!in_array($t,$nums)){
             $nums[]=$t;
         }
+        $i++;
     }
     echo "<pre>";
     print_r($nums);
     echo "</pre>";
+    echo "迴圈次數:".$i;
     ?>
 </body>
 </html>
