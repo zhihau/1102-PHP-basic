@@ -24,7 +24,7 @@ for($i=$year;$i<=($year+500);$i++){
 // echo "<pre>";
 // print_r($leaps);
 // echo "</pre>";
-$y=2103;
+$y=2105;
 if(in_array($y,$leaps)){
     echo $y . "是閏年";
 }else{
