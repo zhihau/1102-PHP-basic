@@ -43,6 +43,7 @@ print_r($array);
 echo '</pre>';
 echo '<br>';
 array_splice($array,1,0,"<span style='font-size:30px;color:red'>" . $sub . "</span>");
+// https://www.runoob.com/php/func-array-splice.html
 echo '<pre>';
 print_r($array);
 echo '</pre>';
