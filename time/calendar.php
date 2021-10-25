@@ -22,6 +22,15 @@
 <body>
     <h1>線上月曆</h1>
     <?php
+    $firstDay=date("Y-m-01");
+    $month=date("m");
+$firstWeekFirstDay=date("w",strtotime($firstDay));
+echo "firstDay".$firstDay;
+echo '<br>';
+echo "month".$month;
+echo '<br>';
+echo "firstWeekFirstDay".$firstWeekFirstDay;
+echo '<br>';
     echo '<table>';
     
     echo '<tr>';
@@ -36,13 +45,14 @@
     echo '</tr>';
     for($i=0;$i<6;$i++){
         echo '<tr>';
+        // $whiteDay=;
         for($j=0;$j<7;$j++){
-            if(($i==0&&$j<5)||($i==5&&$j>0)){
+            if(($i==0&&$j<$firstWeekFirstDay)||($i==$firstWeekFirstDay&&$j>0)){
                 echo '<td>&nbsp;</td>';
             }
             else{
                 echo '<td>'.
-                $i*7+$j-4 .
+                $i*7+$j-$firstWeekFirstDay .
                 '</td>';
             }
         }
