@@ -37,9 +37,7 @@
     for($i=0;$i<6;$i++){
         echo '<tr>';
         for($j=0;$j<7;$j++){
-            if($i==0&&$j<5){
-                echo '<td>&nbsp;</td>';
-            }else if($i==5&&$j>0){
+            if(($i==0&&$j<5)||($i==5&&$j>0)){
                 echo '<td>&nbsp;</td>';
             }
             else{
