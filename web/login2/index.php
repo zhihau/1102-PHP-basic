@@ -1,3 +1,8 @@
+<?php
+if(isset($_COOKIE['user'])){
+    header('location:mem_center.php');//在他執行之前不能有任何輸出
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

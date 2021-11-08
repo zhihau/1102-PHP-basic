@@ -9,7 +9,7 @@
 <body>
     welcom
     <?php
-    echo $_COOKIE['name'];
+    echo $_COOKIE['user'];
     ?>
 </body>
 </html>
