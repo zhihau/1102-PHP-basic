@@ -16,18 +16,30 @@
         <li>今天是西元2021年10月5日 上班日(或假日)</li>
     </ul>
     <?php
-    $now=strtotime('now');
-    echo date("Y/m/d",$now);
-    echo "<br>";
-    echo date("m月j日 l",$now);
-    echo "<br>";
-    echo date("Y-m-d G:",$now);
-    echo "<br>";
-    echo date("Y-m-d H:i:s",$now);
-    echo "<br>";
-    ?>
-    
-    
+$now = strtotime('now');
+// echo date("Y/m/d", $now);
+echo "<br>jkjkkkk";
+echo date("m月j日 l", $now);
+echo "<br>";
+echo date("Y-m-d H:i:s", $now);
+echo "<br>";
+echo date("Y-n-j H:i:s", $now);
+echo "<br>";
+$date = date("今天是西元Y年m月d日 上班日(或假日)");
+echo $date;
+?>
+    <?php
+$date = date("今天是西元Y年m月d日 上班日(或假日)");
+echo $date;
+if (date("N") >= 6) {
+    echo $date . "假日";
+} else {
+    echo $date . "上班日";
+
+}
+?>
+
+
 
 
 
