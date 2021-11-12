@@ -1,6 +1,8 @@
 <?php
-if(isset($_COOKIE['user'])){
+session_start();
+if(isset($_SESSION['user'])){
     header('location:mem_center.php');//在他執行之前不能有任何輸出
+    //要常常去打才不會打錯 打成local
 }
 ?>
 <!DOCTYPE html>

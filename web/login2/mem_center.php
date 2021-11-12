@@ -9,7 +9,14 @@
 <body>
     welcom
     <?php
-    echo $_COOKIE['user'];
+    session_start();
+    if(isset($_COOKIE['user'])){
+
+        echo $_COOKIE['user'];
+    }else{
+
+        echo $_SESSION['user'];
+    }
     ?>
 </body>
 </html>
