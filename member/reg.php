@@ -11,7 +11,7 @@
 <body>
     <!-- 跟目錄開始算，/include -->
     <!-- 抓機器本身的跟目錄 -->
-    <!-- <?php include __FILE__."/include/header.php";?> -->
+    
     <?php include "./include/header.php";?>
     <?php include "./include/nav.php";?>
     <?php include "./include/side_bar.php";?>
@@ -24,7 +24,7 @@
         </tr>
         <tr>
             <td>密碼:</td>
-            <td><input type="text" name="password" id=""></td>
+            <td><input type="password" name="password" id=""></td>
         </tr>
         <tr>
             <td>電子郵件:</td>
