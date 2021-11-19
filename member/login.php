@@ -1,3 +1,12 @@
+<?php
+session_start();
+if(isset($_SESSION['user'])){
+    echo "已登入";
+}else{
+    echo "未登入";
+
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +22,7 @@
     
     <?php include "./include/header.php";?>
     <?php include "./include/nav.php";?>
-    <?php include "./include/side_bar.php";?>
+    
     <div class="content">
 <form action="./api/check_login.php" method="post">
     <table id="loginForm">

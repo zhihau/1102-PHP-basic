@@ -1,3 +1,11 @@
+<?php
+session_start();
+if(!isset($_SESSION['user'])){
+    // echo "非法登入";
+    header("location:index.php");
+    exit();//後面的不執行
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,20 +31,20 @@
   $pdo=new PDO($dsn, 'root','');
   $sql="select * from `account`,`member` 
                 where `account`.`id`=`member`.`id` && 
-                      `account`.`account`='{$_GET['user']}'";
+                      `account`.`account`='{$_SESSION['user']}'";
 //   $sql="select `member`.`address`,
 //                `member`.`mobile`,
 //                `account`.`mail`,
 //                `member`.`birthday`
 //                 from `account`,`member` 
 //                 where `account`.`id`=`member`.`id` && 
-//                       `account`.`account`='{$_GET['user']}'";
+//                       `account`.`account`='{$_SESSION['user']}'";
   echo $sql;
   $user=$pdo->query($sql)->fetch();
 
   ?>
   <!-- 表單直接加參數 -->
-<form action="./api/edit_user.php?user=<?=$_GET['user']?>" method="post" style="display:flex;flex-direction:column;width:30%;font-size:20px" id="editUserForm">
+<form action="./api/edit_user.php?user=<?=$_SESSION['user']?>" method="post" style="display:flex;flex-direction:column;width:30%;font-size:20px" id="editUserForm">
 <!-- <p> -->
 <label for="id">id:</label><?=$user['id']?>
 <input type="hidden" name="id" id="id" value="<?=$user['id']?>">

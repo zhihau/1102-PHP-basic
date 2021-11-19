@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (isset($_SESSION['user'])) {
+    echo "已登入";
+} else {
+    echo "未登入";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,25 +29,37 @@
             width: 100%;
             padding: 10px 5px;
             text-align: right;
-            
+
         }
-        button{
+
+        button {
             padding: 5px 10px;
         }
     </style>
 </head>
 
 <body>
-    
+
     <nav>
         <?php
-        if(isset($_GET['err'])){
+        if (isset($_GET['err'])) {
             echo "帳號或密碼錯誤，請重新登入";
         }
         ?>
-        <a href="reg.php"><button>註冊新會員</button></a>
-        <a href="login.php"><button>點我登入</button></a>
-        
+        <?php
+        if (isset($_SESSION['user'])) {
+
+
+        ?>
+            <a href="dashboard.php"><button>會員中心</button></a>
+        <?php
+        } else {
+        ?>
+            <a href="reg.php"><button>註冊新會員</button></a>
+            <a href="login.php"><button>點我登入</button></a>
+        <?php
+        }
+        ?>
     </nav>
 </body>
 

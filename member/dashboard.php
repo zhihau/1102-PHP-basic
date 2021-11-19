@@ -1,3 +1,11 @@
+<?php
+session_start();
+if(!isset($_SESSION['user'])){
+    // echo "非法登入";
+    header("location:index.php");
+    exit();//後面的不執行
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,11 +26,11 @@
     <div class="content">
 <h3>會員中心</h3>
 
-  <?=$_GET['user']?>  歡迎你:<br>
+  <?=$_SESSION['user']?>  歡迎你:<br>
   <?php
   $dsn="mysql:host=localhost;charset=utf8;dbname=member";
   $pdo=new PDO($dsn, 'root','');
-  $sql="select * from `account`,`member` where `account`.`id`=`member`.`id` && `account`.`account`='{$_GET['user']}'";
+  $sql="select * from `account`,`member` where `account`.`id`=`member`.`id` && `account`.`account`='{$_SESSION['user']}'";
   $user=$pdo->query($sql)->fetch();
 
   ?>

@@ -3,7 +3,7 @@ $dsn="mysql:host=localhost;charset=utf8;dbname=member";
 $pdo=new PDO($dsn,'root','');
 
 $id=$_POST['id'];
-$addr=$_POST['address'];
+$address=$_POST['address'];
 $mobile=$_POST['mobile'];
 $mail=$_POST['mail'];
 $birthday=$_POST['birthday'];
@@ -23,6 +23,6 @@ $pdo->exec($sql_account);
 // echo "<hr>";
 $pdo->exec($sql_member);
 // 回到首頁   回到編輯資料葉面，確認資料是否更新無誤    回到dashboard
-// get post 要記得網址是否要帶參數  沒有帶會出現錯誤
-header("location:../dashboard.php?user={$_GET['user']}");
+// get post 要記得網址是否要帶參數  沒有帶會出現錯誤，實務上用多種方法，用不同的目的用不同的方法
+header("location:../dashboard.php?user={$_SESSION['user']}");
 ?>

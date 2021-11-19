@@ -1,4 +1,5 @@
 <?php
+session_start();
 // $account=$_POST['account'];
 // $password=$_POST['password'];
 // 再把輸入的做一次編碼再比對
@@ -26,7 +27,9 @@ echo "<hr>";
 // fetchall一定是二為陣列
 if($result>0){
     // echo "登入成功";
-    header('location:../dashboard.php?user='.$_POST['account']);
+    $_SESSION['user']=$_POST['account'];
+    header('location:../dashboard.php');
+    // header('location:../dashboard.php?user='.$_POST['account']);
     // header('location:../dashboard.php');//header前面不要echo任何東西
 }else{
     // echo "帳號或密碼錯誤";
