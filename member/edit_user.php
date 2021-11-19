@@ -4,6 +4,7 @@ if(!isset($_SESSION['user'])){
     // echo "非法登入";
     header("location:index.php");
     exit();//後面的不執行
+    exit();//後面的不執行
 }
 ?>
 <!DOCTYPE html>
