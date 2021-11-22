@@ -61,4 +61,6 @@ function update($table,$column,$where){
 }
 update('expenditure',$column,$where);
 // 制定函數功能不用在寫一大串
+for($i=0;$i<10;$i++)
+{update($table,$column,$i);}
 ?>
