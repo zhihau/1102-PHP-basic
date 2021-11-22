@@ -24,5 +24,5 @@ $pdo->exec($sql_account);
 $pdo->exec($sql_member);
 // 回到首頁   回到編輯資料葉面，確認資料是否更新無誤    回到dashboard
 // get post 要記得網址是否要帶參數  沒有帶會出現錯誤，實務上用多種方法，用不同的目的用不同的方法
-header("location:../dashboard.php?user={$_SESSION['user']}");
+header("location:../content.php?action=dashboard&user={$_SESSION['user']}");
 ?>

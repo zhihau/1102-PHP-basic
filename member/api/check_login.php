@@ -28,7 +28,7 @@ echo "<hr>";
 if($result>0){
     // echo "登入成功";
     $_SESSION['user']=$_POST['account'];
-    header('location:../dashboard.php');
+    header('location:../content.php?action=dashboard');
     // header('location:../dashboard.php?user='.$_POST['account']);
     // header('location:../dashboard.php');//header前面不要echo任何東西
 }else{
